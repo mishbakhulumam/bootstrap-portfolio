@@ -1,6 +1,8 @@
 .jumbotron {
   background-color: #ffdab9;
   padding-top: 6rem;
+  height: 100vh;
+  position: relative;
 }
 
 body {
@@ -9,6 +11,11 @@ body {
 
 #project {
   background-color: #ffdab9;
+}
+
+#about {
+  height: 100vh;
+  position: relative;
 }
 
 footer {
@@ -21,4 +28,15 @@ footer {
 section {
   padding-top: 6rem;
   padding-bottom: 4rem;
+}
+
+@media (max-width: 576px) {
+  .btn-github {
+    width: 90%;
+    box-shadow: grey;
+  }
+
+  .navbar {
+    background-color: black !important;
+  }
 }
