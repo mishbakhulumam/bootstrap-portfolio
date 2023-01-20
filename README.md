@@ -9,4 +9,3 @@ di channel tersebut juga banyak dan ada lanjutan tentang pembuatan website portf
 # Framework 
 - Bootstrap v5.
 - aos.js
-- Node.js
