@@ -1,17 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
   
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 
     <!-- css -->
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="fontawesome/css/all.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 
     <!-- font style -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,200&display=swap" rel="stylesheet" />
@@ -21,7 +24,7 @@
   <body id="home">
 
     <!--navbar-->
-    <nav class="navbar navbar-expand-lg navbar-dark shadow-sm fixed-top" style="background-color: #ff6347" id="navbar">
+    <nav class="navbar navbar-expand-lg shadow-sm fixed-top" style="background-color: var(--bs-body-bg)" id="navbar">
       <div class="container">
         <a class="navbar-brand" href="#"><img src="img/code-solid.svg" alt="logo" width="50" height="30"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,14 +36,42 @@
               <a class="nav-link active" aria-current="page" href="#home">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="#about">About</a>
+              <a class="nav-link active" href="#about">Tentang</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="#projects">My Work</a>
+              <a class="nav-link active" href="#projects">Projek</a>
             </li>
             <li class="nav-item">
               <a class="nav-link active" href="#contact">Contact</a>
             </li>
+
+            <!-- toggle dropdown dark/light -->
+            <li class="nav-item dropdown" id="dropdown">
+                <button class="btn nav-link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="bi bi-sun-fill theme-icon-active" data-theme-icon-active="bi-sun-fill"></i>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-sm-end">
+                  <li>
+                    <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="light" >
+                      <i class="bi bi-sun-fill me-2 opacity-50" data-theme-icon="bi-sun-fill"></i>
+                      Light
+                    </button>
+                  </li>
+                  <li>
+                    <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="dark" >
+                      <i class="bi bi-moon-fill me-2 opacity-50" data-theme-icon="bi-moon-fill"></i>
+                      Dark
+                    </button>
+                  </li>
+                  <li>
+                    <button class="dropdown-item d-flex align-items-center" type="button" data-bs-theme-value="auto" >
+                      <i class="bi bi-circle-half me-2 opacity-50" data-theme-icon="bi-circle-half"></i>
+                      Auto
+                    </button>
+                  </li>
+                </ul>
+            </li>
+
           </ul>
         </div>
       </div>
@@ -52,7 +83,7 @@
       <img src="img/hiro.jpg" alt="img of hiro" width="200" class="rounded-circle img-thumbnail" />
       <h1 class="display-4">Mishbakhul Umam</h1>
       <p class="lead">Front-end Web Developer</p>
-      <a href="https://github.com/mishbakhulumam" target="_blank" class="btn btn-dark btn-github" id="profile-link">Follow my Github <i class="fab fa-github"></i></a>
+      <a href="https://github.com/mishbakhulumam" target="_blank" class="btn btn-dark btn-github shadow-sm" id="profile-link">Follow my Github <i class="fab fa-github"></i></a>
     </section>
     <!-- jumbotron end -->
 
@@ -61,15 +92,15 @@
       <div class="container">
         <div class="row text-center mb-3">
           <div class="col">
-            <h2>About</h2>
+            <h2>Tentang</h2>
           </div>
         </div>
         <div class="row justify-content-center fs-5 text-center">
-          <div class="col-md-4">
-            <p>Hello I'm Mishbakhul Umam, I'm from Indonesia I have been study in University Of Muhammadiya Gresik 2016-2019 I'm a Front-End Developer for more than 3 years and still love to do</p>
+          <div class="col-md-5">
+            <p>Halo saya Mishbakhul Umam, saya dari Indonesia Saya telah belajar di Universitas Muhammadiyah Gresik 2016-2019 Saya seorang Pengembang Front-End selama lebih dari 3 tahun dan masih suka melakukannya</p>
           </div>
-          <div class="col-md-4">
-            <p>I really like new things, especially technology and want to learn together I'm very happy if you want to get to know me better, And now I working at Speaking Partner become IT support. see you yourself!!! </p>
+          <div class="col-md-5">
+            <p>Saya sangat menyukai hal-hal baru, terutama teknologi dan ingin belajar bersama Saya sangat senang jika Anda ingin mengenal saya lebih baik, Dan sekarang saya bekerja di Speaking Partner menjadi IT support. </p>
           </div>
         </div>
       </div>
@@ -81,7 +112,7 @@
       <div class="container">
         <div class="row text-center mb-3">
           <div class="col">
-            <h2>My Work</h2>
+            <h2>Projekku</h2>
           </div>
         </div>
         <div class="row">
@@ -89,9 +120,12 @@
             <div class="card" project-tile data-aos="flip-left" data-aos-duration="500">
               <img src="img/project/tnc2.png" class="card-img-top" alt="my-work1" />
               <div class="card-body">
-                <h5 class="card-title"><strong>Form Login and Register</strong></h5>
+                <h5 class="card-title"><a href="https://mishbakhulumam.github.io/Registration-Login/" target="_blank" class=""><strong>Form Login and Register</strong></a></h5>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="https://mishbakhulumam.github.io/Registration-Login/" target="_blank" class="btn btn-primary">Go to project &raquo;</a>
+                <div>
+                  <img src="img/teknologi/html5-logo.png" alt="html5" width="100" height="40">
+                </div>
+                <!-- <a href="https://mishbakhulumam.github.io/Registration-Login/" target="_blank" class="btn btn-primary">Go to project &raquo;</a> -->
               </div>
             </div>
           </div>
@@ -99,9 +133,12 @@
             <div class="card project-tile" data-aos="flip-left" data-aos-duration="500" data-aos-delay="500">
               <img src="img/project/tnc.png" class="card-img-top" alt="my-work2" />
               <div class="card-body">
-                <h5 class="card-title"><strong>Technical Documentation Page</strong></h5>
+                <h5 class="card-title"><a href="https://codepen.io/mishbakhulumam/pen/WNZmeYa?editors=1000"><strong>Technical Documentation Page</strong></a></h5>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="https://codepen.io/mishbakhulumam/pen/WNZmeYa?editors=1000" target="_blank" class="btn btn-primary">Go to project &raquo;</a>
+                <div class="">
+                  <img src="img/teknologi/html5-logo.png" alt="html5" width="100" height="40">
+                </div>
+                <!-- <a href="https://codepen.io/mishbakhulumam/pen/WNZmeYa?editors=1000" target="_blank" class="btn btn-primary">Go to project &raquo;</a> -->
               </div>
             </div>
           </div>
@@ -109,8 +146,12 @@
             <div class="card project-tile" data-aos="flip-left" data-aos-duration="500" data-aos-delay="600">
               <img src="img/project/p3.jpg" class="card-img-top" alt="my-work3" />
               <div class="card-body">
+                <h5 class="card-title"><a href="https://codepen.io/mishbakhulumam/pen/WNZmeYa?editors=1000"><strong>Technical Documentation Page</strong></a></h5>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go to project &raquo;</a>
+                <div class="">
+                  <img src="img/teknologi/html5-logo.png" alt="html5" width="100" height="40">
+                </div>
+                <!-- <a href="https://codepen.io/mishbakhulumam/pen/WNZmeYa?editors=1000" target="_blank" class="btn btn-primary">Go to project &raquo;</a> -->
               </div>
             </div>
           </div>
@@ -118,8 +159,12 @@
             <div class="card project-tile" data-aos="flip-left" data-aos-duration="500" data-aos-delay="700">
               <img src="img/project/p4.jpg" class="card-img-top" alt="my-work4" />
               <div class="card-body">
+                <h5 class="card-title"><a href="https://codepen.io/mishbakhulumam/pen/WNZmeYa?editors=1000"><strong>Technical Documentation Page</strong></a></h5>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go to project &raquo;</a>
+                <div class="">
+                  <img src="img/teknologi/html5-logo.png" alt="html5" width="100" height="40">
+                </div>
+                <!-- <a href="https://codepen.io/mishbakhulumam/pen/WNZmeYa?editors=1000" target="_blank" class="btn btn-primary">Go to project &raquo;</a> -->
               </div>
             </div>
           </div>
@@ -127,8 +172,12 @@
             <div class="card project-tile" data-aos="flip-left" data-aos-duration="500" data-aos-delay="800">
               <img src="img/project/p5.jpg" class="card-img-top" alt="my-work5" />
               <div class="card-body">
+                <h5 class="card-title"><a href="https://codepen.io/mishbakhulumam/pen/WNZmeYa?editors=1000"><strong>Technical Documentation Page</strong></a></h5>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go to project &raquo;</a>
+                <div class="">
+                  <img src="img/teknologi/html5-logo.png" alt="html5" width="100" height="40">
+                </div>
+                <!-- <a href="https://codepen.io/mishbakhulumam/pen/WNZmeYa?editors=1000" target="_blank" class="btn btn-primary">Go to project &raquo;</a> -->
               </div>
             </div>
           </div>
@@ -169,20 +218,26 @@
     <!-- Contact end -->
 
     <!-- Footer -->
-    <footer class="background" style="background-color: #ff6347">
-      <p class="text-white fw-bold">Develop By Mishbakhul Umam. © All Rights Reserved</p>
-      <span style="font-size: 2em;">
-        <a href="https://github.com/mishbakhulumam" target="_blank"><i class="fab fa-github text-black-50"></i></a>
-      </span>
-      <span style="font-size: 2em;">
-        <a href="https://www.instagram.com/mishbakhulumam/" target="_blank"><i class="fab fa-instagram-square text-black-50"></i></a>
-      </span>
-      <span style="font-size: 2em;">
-        <a href="https://www.linkedin.com/in/mishbakhul-umam-946b60228/" target="_blank"><i class="fab fa-linkedin text-black-50"></i></a>
-      </span>
-      <span style="font-size: 2em;">
-        <a href="..." target="_blank"><i class="fab fa-google text-black-50"></i></a>
-      </span>
+    <footer>
+      <div class="container">
+        <span>
+          <a href="https://github.com/mishbakhulumam" target="_blank"><img src="img/github.svg" alt="github"></a>
+        </span>
+        <span>
+          <a href="" target="_blank"><img src="img/instagram.svg" alt="instagram"></a>
+        </span>
+        <span>
+          <a href="" target="_blank"><img src="img/linkedin.svg" alt="linkedin"></a>
+        </span>
+        <span>
+          <a href="" target="_blank"><img src="img/facebook.svg" alt="facebook"></a>
+        </span>
+      </div>
+      <div class="mt-4">
+        <p class="fw-bold">Develop By Mishbakhul Umam. &copy; All Rights Reserved</p>
+      </div>
+      
+      
     </footer>
     <!-- Footer end -->
 
@@ -191,8 +246,76 @@
       AOS.init();
     </script>
   
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <!-- script bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 
-    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  <!-- script toogle light/dark -->
+  <script>
+    /*!
+ * Color mode toggler for Bootstrap's docs (https://getbootstrap.com/)
+ * Copyright 2011-2022 The Bootstrap Authors
+ * Licensed under the Creative Commons Attribution 3.0 Unported License.
+ */
+
+(() => {
+  'use strict'
+
+  const storedTheme = localStorage.getItem('theme')
+
+  const getPreferredTheme = () => {
+    if (storedTheme) {
+      return storedTheme
+    }
+
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+  }
+
+  const setTheme = function (theme) {
+    if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.documentElement.setAttribute('data-bs-theme', 'dark')
+    } else {
+      document.documentElement.setAttribute('data-bs-theme', theme)
+    }
+  }
+
+  setTheme(getPreferredTheme())
+
+  const showActiveTheme = theme => {
+    const activeThemeIcon = document.querySelector('.theme-icon-active')
+    const btnToActive = document.querySelector(`[data-bs-theme-value="${theme}"]`)
+    const iconOfActiveBtn = btnToActive.querySelector('i').dataset.themeIcon
+
+    document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
+      element.classList.remove('active')
+    })
+
+    btnToActive.classList.add('active')
+    activeThemeIcon.classList.remove(activeThemeIcon.dataset.themeIconActive)
+    activeThemeIcon.classList.add(iconOfActiveBtn)
+    activeThemeIcon.dataset.iconActive = iconOfActiveBtn
+  }
+
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+    if (storedTheme !== 'light' || storedTheme !== 'dark') {
+      setTheme(getPreferredTheme())
+    }
+  })
+
+  window.addEventListener('DOMContentLoaded', () => {
+    showActiveTheme(getPreferredTheme())
+
+    document.querySelectorAll('[data-bs-theme-value]')
+      .forEach(toggle => {
+        toggle.addEventListener('click', () => {
+          const theme = toggle.getAttribute('data-bs-theme-value')
+          localStorage.setItem('theme', theme)
+          setTheme(theme)
+          showActiveTheme(theme)
+        })
+      })
+  })
+})()
+  </script>
+
   </body>
 </html>
