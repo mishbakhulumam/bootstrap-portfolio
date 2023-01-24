@@ -1,5 +1,5 @@
 .jumbotron {
-  background-color: #ffdab9;
+  background-color: var(--bs-body-bg);
   padding-top: 6rem;
   height: 100vh;
   position: relative;
@@ -37,6 +37,7 @@ section {
   }
 
   .navbar {
-    background-color: black !important;
+    text-align: center;
   }
 }
+
